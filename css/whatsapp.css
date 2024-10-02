@@ -1,0 +1,66 @@
+/* Styles for the WhatsApp button */
+.button2 {
+  position: fixed; /* Fixes the button's position */
+  bottom: 20px; /* Distance from the bottom */
+  right: 20px; /* Distance from the right */
+  display: flex; /* Align icon and text horizontally */
+  align-items: center; /* Vertically center icon and text */
+  background: #e8e8e8; /* Background color of the button */
+  color: #090909; /* Text color */
+  padding: 0.5em 1.2em; /* Reduced padding around the button */
+  font-size: 16px; /* Reduced font size */
+  border-radius: 0.4em; /* Slightly smaller rounded corners */
+  text-decoration: none; /* Remove underline from link */
+  box-shadow: 4px 4px 8px #c5c5c5, -4px -4px 8px #ffffff; /* Reduced shadow effects */
+  z-index: 1000; /* Ensure the button is above other elements */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Styles for the SVG icon inside the button */
+.button2 svg {
+  height: 24px; /* Reduced size of the icon */
+  margin-right: 8px; /* Reduced space between icon and text */
+  fill: #fff; /* Color of the icon */
+}
+
+/* Hover state */
+.button2:hover {
+  color: #ffffff; /* Text color on hover */
+  background: #009087; /* Background color on hover */
+  border: 1px solid #009087; /* Border color on hover */
+}
+
+/* Active state */
+.button2:active {
+  color: #666; /* Text color when button is pressed */
+  box-shadow: inset 4px 4px 8px #c5c5c5, inset -4px -4px 8px #ffffff; /* Reduced inner shadow */
+}
+
+/* Button pseudo-elements for visual effects */
+.button2:before,
+.button2:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s ease;
+  z-index: -1;
+}
+
+.button2:before {
+  left: 50%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.2); /* Slightly smaller scale */
+  top: 100%;
+  width: 120%; /* Reduced width */
+  height: 140%; /* Reduced height */
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.button2:after {
+  left: 55%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.35); /* Slightly smaller scale */
+  top: 180%;
+  width: 140%; /* Reduced width */
+  height: 150%; /* Reduced height */
+  background-color: #009087;
+}
